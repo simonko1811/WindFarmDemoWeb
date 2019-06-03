@@ -1,0 +1,45 @@
+template: Hello, %s!
+defaultName: Stranger
+
+#Database service + OAuth service
+serviceDbAuth:
+  clientId: client1
+  secret: 123456
+  path: /
+  serviceConnectors:
+    - type: http
+      port: 8085
+    - type: https
+      port: 8445
+
+# Logging settings.
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+
+  # Logger-specific levels.
+  loggers:
+
+    # Sets the level for 'com.example.app' to DEBUG.
+    sk.fri.uniza: DEBUG
+
+    # Redirects SQL logs to a separate file
+    org.hibernate.SQL:
+      level: DEBUG
+
+
+#Server configuration.
+server:
+  rootPath: /
+  applicationConnectors:
+    - type: http
+      port: 8080
+    - type: https
+      port: 8443
+      keyStorePath: dwstart.keystore
+      keyStorePassword: crimson
+      validateCerts: false
+  adminConnectors:
+    - type: http
+      port: 8082
