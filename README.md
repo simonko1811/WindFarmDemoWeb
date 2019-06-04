@@ -1,5 +1,5 @@
 # WindFarmDemo Web application
-This application is dependent on the REST service [windfarm demo](https://github.com/hudikm/WindFarmDemo).
+This application is dependent on the REST service [windfarm demo](https://github.com/simonko1811/WindFarmDemo).
 
 [Documentation(Slovak)](https://hudikm.github.io/WindfarmDemoDocs/)
 
